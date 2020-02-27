@@ -42,7 +42,24 @@ $(function () {
 		// Make sure the form is submitted to the destination defined
 		// in the "action" attribute of the form when valid
 		submitHandler: function (form) {
-			form.submit();
+			var data = $("#emailForm").serializeArray().reduce(function (obj, item) {
+				obj[item.name] = item.value;
+				return obj;
+			}, {});
+			let url = "http://localhost:8080/api/publixity/mail";
+			let success = (res => {
+				console.log(res);
+			})
+			let dataType = "json";
+			$.ajax({
+				type: "POST",
+				url: url,
+				contentType: "application/json",
+				data: JSON.stringify(data),
+				success: success,
+				dataType: dataType
+			});
+			console.log(data);
 		}
 	});
 });
