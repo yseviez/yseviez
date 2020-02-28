@@ -9,6 +9,10 @@
     />
     <meta http-equiv="”Content-Language”" content="”es”" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+    />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
   </head>
   <body class="is-preload">
@@ -18,6 +22,14 @@
       <header id="header" class="alt">
         <nav>
           <a href="#menu">Menu</a>
+          <select
+            style="width: 6rem;
+		  height: auto;"
+            id="lang"
+          >
+            <option value="en">EN</option>
+            <option selected value="es">ES</option>
+          </select>
         </nav>
       </header>
 
@@ -26,13 +38,11 @@
         <div class="inner">
           <h2>Menu</h2>
           <ul class="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="generic.html">Generic</a></li>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Sign Up</a></li>
+            <li><a id="menu-us" href="#banner">Nosotros</a></li>
+            <li><a id="menu-servicios" href="#servicios">Servicios</a></li>
+            <li><a id="menu-contacto" href="#contacto">Contáctanos</a></li>
           </ul>
-          <a href="#" class="close">Close</a>
+          <a href="#" class="close">Cerrar</a>
         </div>
       </nav>
 
@@ -42,14 +52,14 @@
           <div class="logo">
             <img src="images/Logotipo.png" />
           </div>
-          <h2>
+          <h2 id="title1">
             Agencia de <br />
-            <i class="subtitle-back">Desarrollo Digital</i>
+            <i class="subtitle-back" id="title2">Desarrollo Digital</i>
           </h2>
         </div>
       </section>
       <div class="curves">
-        <p class="about-text">
+        <p class="about-text" id="about-text">
           Nuestro talento humano está especializado en el desarrollo
           tecnológico, enfocado en impulsar tu marca en el mercado digital.<br />
           Aportando nuestros conocimientos técnicos, teóricos y prácticos para
@@ -114,10 +124,10 @@
         </section> -->
 
         <!-- Four -->
-        <section id="four" class="wrapper alt style1">
+        <section id="servicios" class="wrapper alt style1">
           <div class="inner">
-            <h2 class="major yellow-title">SERVICIOS</h2>
-            <h3>
+            <h2 class="major yellow-title" id="services-title">SERVICIOS</h2>
+            <h3 id="services-subtitle">
               Con base en las últimas tendencias y herramientas, diseñamos el
               plan perfecto para llevar tu marca a otro nivel.
             </h3>
@@ -126,8 +136,10 @@
                 <a href="#" class="image"
                   ><img src="images/Presencia en redes.png" alt=""
                 /></a>
-                <h3 class="major upper">Presencia en redes sociales</h3>
-                <p>
+                <h3 class="major upper" id="serv-1-title">
+                  Presencia en redes sociales
+                </h3>
+                <p id="serv-1-desc">
                   Creamos, gestionamos y/o monitoreamos tu marca en redes
                   sociales.
                   <br />
@@ -138,8 +150,10 @@
                 <a href="#" class="image"
                   ><img src="images/Producción audiovisual.png" alt=""
                 /></a>
-                <h3 class="major upper">Producción audiovisual</h3>
-                <p>
+                <h3 class="major upper" id="serv-2-title">
+                  Producción audiovisual
+                </h3>
+                <p id="serv-2-desc">
                   Desarrollamos tus vídeos corporativos y comerciales desde
                   cero, el concepto, mensaje y estilo.
                 </p>
@@ -148,8 +162,10 @@
                 <a href="#" class="image"
                   ><img src="images/Desarrollo APP.png" alt=""
                 /></a>
-                <h3 class="major upper">Desarrollo de apps</h3>
-                <p>
+                <h3 class="major upper" id="serv-3-title">
+                  Desarrollo de apps
+                </h3>
+                <p id="serv-3-desc">
                   Realizamos esquematización, prototipo, diseño y estilo de tu
                   aplicación móvil, basados en los conocimientos UX actuales.
                 </p>
@@ -158,8 +174,8 @@
                 <a href="#" class="image"
                   ><img src="images/Desarrollo web.png" alt=""
                 /></a>
-                <h3 class="major upper">Páginas web</h3>
-                <p>
+                <h3 class="major upper" id="serv-4-title">Páginas web</h3>
+                <p id="serv-4-desc">
                   Desarrollamos la página web de tu negocio, planificamos y
                   administramos tu estrategia SEO y SEM.
                 </p>
@@ -168,8 +184,10 @@
                 <a href="#" class="image"
                   ><img src="images/Coberturas.png" alt=""
                 /></a>
-                <h3 class="major upper">Cobertura de eventos</h3>
-                <p>
+                <h3 class="major upper" id="serv-5-title">
+                  Cobertura de eventos
+                </h3>
+                <p id="serv-5-desc">
                   Cubrimos tu evento, generamos entrevistas, material
                   fotográfico, vídeos y más.
                 </p>
@@ -178,8 +196,8 @@
                 <a href="#" class="image"
                   ><img src="images/Diseño Grafico.png" alt=""
                 /></a>
-                <h3 class="major upper">Diseño gráfico</h3>
-                <p>
+                <h3 class="major upper" id="serv-6-title">Diseño gráfico</h3>
+                <p id="serv-6-desc">
                   Prestamos servicios de branding, identidad de marca, imágenes
                   promocionales y todo el soporte visual posible para tu marca.
                 </p>
@@ -191,20 +209,20 @@
 
       <!-- Footer -->
       <section id="footer">
-        <div class="inner">
-          <h2 class="major yellow-title">Contáctanos</h2>
+        <div class="inner" id="contacto">
+          <h2 class="major yellow-title" id="contact-title">Contáctanos</h2>
           <form method="post" action="" name="email" id="emailForm">
             <div class="fields">
               <div class="field">
-                <label for="name">Nombre</label>
+                <label for="name" id="form-name">Nombre</label>
                 <input type="text" name="name" id="name" required />
               </div>
               <div class="field">
-                <label for="email">Correo</label>
+                <label for="email" id="form-email">Correo</label>
                 <input type="email" name="email" id="email" required />
               </div>
               <div class="field">
-                <label for="message">Mensaje</label>
+                <label for="message" id="form-message">Mensaje</label>
                 <textarea
                   name="message"
                   id="message"
@@ -214,16 +232,13 @@
               </div>
             </div>
             <ul class="actions">
-              <li><input type="submit" value="Enviar" /></li>
+              <li><input type="submit" id="form-send" value="Enviar" /></li>
             </ul>
           </form>
           <ul class="contact">
-            <li class="icon solid fa-home">
-              Ciudad de México
-            </li>
-            <li class="icon solid fa-phone">722 567897</li>
+            <li class="icon solid fa-phone" id="contact-phone">9803492123</li>
             <li class="icon solid fa-envelope">
-              <a href="#">info@publixity.org</a>
+              <a href="#" id="contact-mail">info@publixity.org</a>
             </li>
             <!--<li class="icon brands fa-twitter">
               <a href="#">twitter.com/untitled-tld</a>
@@ -236,7 +251,9 @@
             </li>-->
           </ul>
           <ul class="copyright">
-            <li>&copy; Publixity. Todos los derechos reservados.</li>
+            <li id="copyr" style="color:white;">
+              &copy; Publixity. Todos los derechos reservados.
+            </li>
           </ul>
         </div>
       </section>
@@ -246,6 +263,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>

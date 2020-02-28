@@ -3245,6 +3245,7 @@ button:disabled,
   right: 0.7em;
   text-transform: uppercase;
   top: 0.7em;
+  display: -webkit-inline-box;
 }
 
 #header nav a {
