@@ -1,7 +1,4 @@
 $(function () {
-	if (location.protocol !== 'https:') {
-		location.replace(`https:${location.href.substring(location.protocol.length)}`);
-	}
 	//lang change
 	$("#lang").change((val) => {
 		let lang = val.target.value;
