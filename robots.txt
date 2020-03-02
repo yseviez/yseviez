@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.publixity.org/sitemap/sitemap.xml

@@ -37,6 +37,7 @@ $(function () {
 			$("#form-message").text("Message")
 			$("#form-send").val("Send")
 			$("#copyr").html("&copy; Publixity. All rights reserved.")
+			$("meta[property='og\\:image']").attr("content", "images/meta-eng.jpg");
 		} else {
 			//cambio a español
 			$('#menu-us').text("Nosotros")
@@ -71,6 +72,7 @@ $(function () {
 			$("#form-message").text("Mensaje")
 			$("#form-send").val("Enviar")
 			$("#copyr").html("&copy; Publixity. Todos los derechos reservados.")
+			$("meta[property='og\\:image']").attr("content", "images/meta-es.jpg");
 		}
 	})
 
