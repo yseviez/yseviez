@@ -38,6 +38,9 @@ $(function () {
 			$("#form-send").val("Send")
 			$("#copyr").html("&copy; Publixity. All rights reserved.")
 			$("meta[property='og\\:image']").attr("content", "images/meta-eng.jpg");
+			$("meta[property='og\\:title']").attr("content", "Publixity - Your digital agency");
+			$("meta[property='og\\:description']").attr("content", "Digital Agency specialized in content and material generation for your business. Digital Agency, Apps, Web Design and Development, events coverage. Contact us!");
+			document.title = "Publixity - Your digital agency";
 		} else {
 			//cambio a español
 			$('#menu-us').text("Nosotros")
@@ -73,6 +76,9 @@ $(function () {
 			$("#form-send").val("Enviar")
 			$("#copyr").html("&copy; Publixity. Todos los derechos reservados.")
 			$("meta[property='og\\:image']").attr("content", "images/meta-es.jpg");
+			$("meta[property='og\\:title']").attr("content", "Publixity - Tu agencia digital");
+			$("meta[property='og\\:description']").attr("content", "Agencia Digital especialista en la generación de contenidos y material para su negocio. Agencia Digital, Apps, Diseño y Desarrollo Web, eventos coberturas .¡Contáctenos!");
+			document.title = "Publixity - Tu agencia digital"
 		}
 	})
 
